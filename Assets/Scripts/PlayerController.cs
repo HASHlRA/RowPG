@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isWalking;
 
-    private Vector2 lastDirection;
+    public Vector2 lastDirection;
 
     private Animator _animator;
 
