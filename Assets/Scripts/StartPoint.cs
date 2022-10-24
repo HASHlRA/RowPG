@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StartPoint : MonoBehaviour
 {
+    public string uuid; // uuid = universal uniqued identifier
     private PlayerController player;
     [SerializeField] private Vector2 facingDirection;
 
@@ -11,8 +12,12 @@ public class StartPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = FindObjectOfType<PlayerController>();
+        if (!player.nextUuid.Equals(uuid))
+        {
+            return;
+        }
        
-            player = FindObjectOfType<PlayerController>();
             player.transform.position = transform.position;
             player.lastDirection = facingDirection;
        

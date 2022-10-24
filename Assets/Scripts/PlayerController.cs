@@ -16,9 +16,13 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 lastDirection;
 
+    public string nextUuid;
+
     private Animator _animator;
 
     private Rigidbody2D _rigidbody;
+
+    public static bool playerCreated;
 
     private void Awake ()
     {
@@ -67,5 +71,12 @@ public class PlayerController : MonoBehaviour
         _animator.SetFloat("LastVertical", lastDirection.y);
         _animator.SetBool("IsWalking", isWalking);
 
+    }
+
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerCreated = true;
     }
 }

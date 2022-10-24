@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GoToScene : MonoBehaviour
 {
     public string sceneName = "New Scene name here";
+    public string uuid; // uuid = universal uniqued identifier
 
     public bool isAutomatic;
     private bool manualEnter;
@@ -20,23 +21,22 @@ public class GoToScene : MonoBehaviour
     // Teleport automático
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
-        {
-            if (isAutomatic)
-            {
-                SceneManager.LoadScene(sceneName);
-            }
-        }
+        Teleport(other.name);
     }
 
     // Teleport manual
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.name == "Player")
+        Teleport(other.name);
+    }
+
+    private void Teleport(string objName)
+    {
+        if (objName == "Player")
         {
-            Debug.Log("Estoy en contacto con el teleport");
-            if (!isAutomatic && manualEnter)
+            if (isAutomatic || (!isAutomatic && manualEnter))
             {
+                FindObjectOfType<PlayerController>().nextUuid = uuid;
                 SceneManager.LoadScene(sceneName);
             }
         }
