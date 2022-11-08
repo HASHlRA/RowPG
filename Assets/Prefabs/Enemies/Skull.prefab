@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1922975728271605114}
   - component: {fileID: 1922975728271605113}
   - component: {fileID: -7060204941439347377}
-  m_Layer: 0
+  - component: {fileID: 258347231643005478}
+  m_Layer: 3
   m_Name: Skull
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,3 +158,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f633b608f6f5d43b83b182b0b47502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  directionToMove: {x: 0, y: 0}
+  timeBetweenSteps: 0
+  timeToMakeStep: 0
+  hasRandomMove: 0
+  enemyDirections: []
+--- !u!114 &258347231643005478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922975728271604998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd80b71ff9fa2d40bacbadd3338a9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRevivePlayer: 0

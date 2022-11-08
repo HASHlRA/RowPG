@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 331661614719401251}
   - component: {fileID: 331661614719401250}
   - component: {fileID: -8430865829825036843}
-  m_Layer: 0
+  - component: {fileID: 8614079484887112438}
+  m_Layer: 3
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -161,3 +162,18 @@ MonoBehaviour:
   directionToMove: {x: 0, y: 0}
   timeBetweenSteps: 3
   timeToMakeStep: 2
+  hasRandomMove: 0
+  enemyDirections: []
+--- !u!114 &8614079484887112438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331661614719401255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfd80b71ff9fa2d40bacbadd3338a9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRevivePlayer: 0
