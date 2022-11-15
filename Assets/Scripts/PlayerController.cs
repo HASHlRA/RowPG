@@ -30,12 +30,18 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    private bool isAttacking;
+    [SerializeField] private float attackTime;
+    private float attackTimeCounter;
+
     // Update is called once per frame
     void Update()
     {
         xInput = Input.GetAxisRaw(HORIZONTAL);
         yInput = Input.GetAxisRaw(VERTICAL);
         isWalking = false;
+
+
 
         // Horizontal movement
         if (Mathf.Abs(xInput) > inputTol)
